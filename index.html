@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title> kan kan game</title>
+		<link type="text/css" href="src/style.css" rel="stylesheet" />		
+	</head>
+	<body>
+	<div id="header">
+		<div class="title">连连看</div>
+	</div>
+	<div id="main">
+		<table id="tab">
+		</table>
+		<div id="pathContain"> </div>
+		<div id="iContain"> </div>
+		<div id="count">
+			<p id="time">60</p>
+			<p id="grade">0</p>
+		</div>
+		<div class="clearFloat"> </div>
+		<div id="btn">
+			<button id="start">开始</button>
+			<button id="pause">暂停</button>
+			<button id="again">再来一局</button>
+			<button id="hint">提示一下</button>
+		</div>	
+	</div>
+	<div id="footer">
+		
+	</div>
+	<script type="text/javascript" src="src/js/domModule.js"></script>
+	<script type="text/javascript" src="src/js/kankan.js"></script>
+	<script type="text/javascript" src="src/js/demo.js"></script>
+	<script type="text/javascript">	
+	mDom.ready(function() {
+		mGame.init('tab', 'iContain');
+		mGame.start('iContain', 'pathContain');
+	});
+	</script>
+	</body>
+</html>
